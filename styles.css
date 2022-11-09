@@ -21,20 +21,20 @@ nav{
     justify-content: space-evenly;
 }
 
-nav li{
+nav ul{
     list-style: none;
 }
 
-nav li ul{
+nav ul li{
     margin: 0;
     padding: 1rem;
 }
 
-nav li ul:hover{
+nav ul li:hover{
     opacity: .7;
 }
 
-nav li ul a{
+nav ul li a{
     text-decoration: none;
     color: black;
 }
@@ -47,6 +47,7 @@ nav li ul a{
     display: none;
 }
 
+
 @media(min-width: 700px){
 
     nav{
@@ -55,23 +56,27 @@ nav li ul a{
         flex-direction: row;
         padding: 0 2rem;
     }
-    nav li{
+    nav ul{
         display: flex;
         justify-content: space-around;
         align-items: center;
         gap: 1rem;
+        padding-top: 0;
+        padding-bottom: 0;
+        margin: 0;
+
     }
 
-    nav li ul{
+    nav ul li{
         border-bottom: transparent 2px solid;
         transition: border-bottom .8s;
     }
 
-    nav li ul:hover{
+    nav ul li:hover{
         border-bottom: black 2px solid;
         opacity: 1;
     }
-    nav li ul a:hover{
+    nav ul li a:hover{
         color: black;
     }
 
@@ -82,6 +87,10 @@ nav li ul a{
     }
 
     .only-desktop{
+        display: flex;
+    }
+
+    .desktop-flex{
         display: flex;
     }
 }
